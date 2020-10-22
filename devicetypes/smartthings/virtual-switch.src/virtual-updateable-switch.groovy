@@ -56,6 +56,19 @@ def off() {
     sendEvent(name: "switch", value: "off", isStateChange: true)
 }
 
+
+def setStatus(type, status) {
+    log.debug("Setting status ${type}: ${status}")
+    
+    // special handling for non-standard attributes
+    if (type == "level") {
+        setLevel(Float.parseFloat(status));
+    }
+    else {
+        sendEvent(name: type, value: status)
+    }
+}
+
 def installed() {
     on()
 }
