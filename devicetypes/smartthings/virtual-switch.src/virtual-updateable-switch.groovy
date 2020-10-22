@@ -45,7 +45,22 @@ metadata {
     }
 }
 
-def parse(description) {
+def parse(String description) {
+    log.debug "parse description: $description"
+
+    def attrName = null
+    def attrValue = null
+
+    if (description?.startsWith("on/off:")) {
+        log.debug "switch command"
+        attrName = "switch"
+        attrValue = description?.endsWith("1") ? "on" : "off"
+    }
+
+    def result = createEvent(name: attrName, value: attrValue)
+
+    log.debug "Parse returned ${result?.descriptionText}"
+    return result
 }
 
 def on() {
