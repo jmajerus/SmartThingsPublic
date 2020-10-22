@@ -45,6 +45,20 @@ metadata {
     }
 }
 
+	
+/*  UI tile definitions
+	tiles {
+		standardTile("button", "device.switch", width: 2, height: 2, canChangeIcon: true) {
+			state "off", label: 'Off', action: "switch.on", icon: "st.contact.contact.closed", backgroundColor: "#ffffff", nextState: "on"
+			state "on", label: 'On', action: "switch.off", icon: "st.contact.contact.open", backgroundColor: "#79b821", nextState: "off"
+		}
+        standardTile("refresh", "device.switch", inactiveLabel: false, decoration: "flat") {
+			state "default", label:'', action:"refresh.refresh", icon:"st.secondary.refresh"
+		}        
+		main "button"
+		details(["button", "refresh"])
+	} */
+
 def parse(String description) {
     log.debug "parse description: $description"
 
