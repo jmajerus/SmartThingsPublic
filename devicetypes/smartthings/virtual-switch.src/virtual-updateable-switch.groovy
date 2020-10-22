@@ -1,7 +1,7 @@
 /**
  *  Copyright 2017 SmartThings
  *
- *  Provides a virtual switch.
+ *  Provides a virtual updateable switch.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -14,7 +14,7 @@
  *
  */
 metadata {
-    definition (name: "Virtual Switch", namespace: "smartthings", author: "SmartThings", runLocally: true, minHubCoreVersion: '000.021.00001', executeCommandsLocally: true, mnmn: "SmartThings", vid: "generic-switch") {
+    definition (name: "Virtual Updateable Switch", namespace: "jmajerus", author: "John Majerus & Smartthings", runLocally: true, minHubCoreVersion: '000.021.00001', executeCommandsLocally: true, mnmn: "SmartThings", vid: "generic-switch") {
         capability "Actuator"
         capability "Sensor"
         capability "Switch"
